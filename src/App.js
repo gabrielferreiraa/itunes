@@ -1,28 +1,35 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import AppName from './components/AppName';
+import GlobalStyle from './components/GlobalStyle';
+import Footer from './components/Footer';
+import Search from './components/Search';
+import Results from './components/Results';
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
+	state = {
+		search: '',
+		showResults: false
+	};
+
+	handleChangeSearch(e) {
+		this.setState({ search: e.target.value });
+	}
+
+	handleClickSearch() {
+		this.setState({ showResults: true });
+	}
+
+	render() {
+		return (
+			<div>
+				<GlobalStyle />
+				<AppName />
+				<Search onChange={this.handleChangeSearch.bind(this)} onSearch={this.handleClickSearch.bind(this)} />
+				<Results term={this.state.search} />
+				<Footer />
+			</div>
+		);
+	}
 }
 
 export default App;
