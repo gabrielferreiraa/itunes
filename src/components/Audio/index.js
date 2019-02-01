@@ -5,19 +5,17 @@ import styled from 'styled-components';
 const fileNameBySituation = situation => (situation === 'playing' ? 'paused' : 'playing');
 
 const PlayerBtn = styled.div`
-	position: absolute;
 	right: 0;
 	top: 0;
-	height: 40px;
-	width: 40px;
-	border-radius: 50%;
+	height: 30px;
+	width: 30px;
 	background: transparent;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 
 	&:before {
-		content: url(${props => fileNameBySituation(props.situation)}.svg);
+		content: url(/${props => fileNameBySituation(props.situation)}.svg);
 	}
 `;
 

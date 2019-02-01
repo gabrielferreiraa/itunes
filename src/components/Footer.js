@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import global from '../global';
+import global from 'helpers/global';
 
 const StyledFooter = styled.footer`
 	height: 80px;
