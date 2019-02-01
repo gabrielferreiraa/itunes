@@ -24,18 +24,22 @@ export const CoverImage = styled.img`
 	object-fit: cover;
 	will-change: filter;
 	transition: filter 200ms ease;
+	cursor: pointer;
 
 	&:hover {
 		filter: grayscale(80%);
 	}
 `;
 
+const wrapperHeight = 40;
+
 export const WrapperInformations = styled.div`
+	position: relative;
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: center;
-	text-align: center;
-	height: 40px;
+	justify-content: space-between;
+	text-align: left;
+	height: ${wrapperHeight}px;
 	width: 100%;
 	margin-top: 5px;
 `;
@@ -46,9 +50,19 @@ export const ArtistName = styled.span`
 	width: 100%;
 	font-size: 0.8em;
 	color: ${global.style.secondaryColor};
+	margin-right: ${wrapperHeight + 10}px;
+	position: relative;
+	display: flex;
+	align-items: center;
+
+	&:after {
+		content: url('redirect.svg');
+		margin-left: 5px;
+	}
 `;
 
 export const MusicName = styled.span`
 	font-style: italic;
 	font-size: 0.7em;
+	margin-right: ${wrapperHeight + 10}px;
 `;
