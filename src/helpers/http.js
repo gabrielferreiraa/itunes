@@ -1,15 +1,10 @@
 import axios from 'axios';
 import global from 'helpers/global';
 
-export default ({ method, url, ...options }) =>
-	axios({
+export default ({ url, ...options }) =>
+	fetch(`${global.apiHost}${url}`, {
 		headers: {
-			'Access-Control-Allow-Origin': '*',
 			'Content-Type': 'application/json'
 		},
-		url: `${global.apiHost}${url}`,
-		method,
 		...options
-	})
-		.then(({ data }) => data)
-		.catch(err => console.error(err.message));
+	}).then(resp => resp.json());

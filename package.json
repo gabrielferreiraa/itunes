@@ -4,7 +4,6 @@
 	"private": true,
 	"homepage": "https://gabrielferreiraa.github.io/itunes",
 	"dependencies": {
-		"axios": "^0.18.0",
 		"gh-pages": "^2.0.1",
 		"react": "^16.7.0",
 		"react-circular-progressbar": "^1.0.0",
@@ -23,5 +22,10 @@
 	"eslintConfig": {
 		"extends": "react-app"
 	},
-	"browserslist": [">0.2%", "not dead", "not ie <= 11", "not op_mini all"]
+	"browserslist": [
+		">0.2%",
+		"not dead",
+		"not ie <= 11",
+		"not op_mini all"
+	]
 }
