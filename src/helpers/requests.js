@@ -32,7 +32,7 @@ export const getAlbumsFromArtist = artistId => {
 
 	return http({
 		method: 'GET',
-		url: `/lookup?id=${artistId}&entity=album&limit=3&sort=recent`
+		url: `/lookup?id=${artistId}&entity=album&limit=3`
 	}).then(({ results }) => results.filter(filterAlbumsOnly));
 };
 

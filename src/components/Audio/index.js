@@ -41,14 +41,23 @@ class Audio extends Component {
 		const hasPropsOnTimeUpdate = !!this.props.onTimeUpdate;
 		const hasAudioRef = !!this.audioRef.current;
 
-		if (!hasPropsOnTimeUpdate || !hasAudioRef) {
+		if (!hasAudioRef) {
 			return;
 		}
 
 		const currentTime = this.audioRef.current.currentTime;
 		const duration = this.audioRef.current.duration;
 
-		const percent = ((currentTime / duration) * 100).toFixed(2);
+		if (duration === currentTime) {
+			this.toggleSituation();
+			this.audioRef.current.currentTime = 0;
+		}
+
+		if (!hasPropsOnTimeUpdate) {
+			return;
+		}
+
+		const percent = (currentTime / duration) * 100;
 
 		this.props.onTimeUpdate(percent);
 	};
