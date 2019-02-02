@@ -1,4 +1,3 @@
-import axios from 'axios';
 import global from 'helpers/global';
 
 export default ({ url, ...options }) =>
