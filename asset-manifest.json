@@ -1,11 +1,11 @@
 {
-  "main.js": "/itunes/static/js/main.584e08bc.chunk.js",
-  "main.js.map": "/itunes/static/js/main.584e08bc.chunk.js.map",
-  "static/js/1.57d184f9.chunk.js": "/itunes/static/js/1.57d184f9.chunk.js",
-  "static/js/1.57d184f9.chunk.js.map": "/itunes/static/js/1.57d184f9.chunk.js.map",
+  "main.js": "/itunes/static/js/main.fe87b058.chunk.js",
+  "main.js.map": "/itunes/static/js/main.fe87b058.chunk.js.map",
+  "static/js/1.e1510d61.chunk.js": "/itunes/static/js/1.e1510d61.chunk.js",
+  "static/js/1.e1510d61.chunk.js.map": "/itunes/static/js/1.e1510d61.chunk.js.map",
   "runtime~main.js": "/itunes/static/js/runtime~main.226c5885.js",
   "runtime~main.js.map": "/itunes/static/js/runtime~main.226c5885.js.map",
   "index.html": "/itunes/index.html",
-  "precache-manifest.815f300096b543625b80c1f494468236.js": "/itunes/precache-manifest.815f300096b543625b80c1f494468236.js",
+  "precache-manifest.cf7ac35658bead667a0e8ac36bdf9405.js": "/itunes/precache-manifest.cf7ac35658bead667a0e8ac36bdf9405.js",
   "service-worker.js": "/itunes/service-worker.js"
 }
