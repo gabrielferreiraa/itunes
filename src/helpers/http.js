@@ -5,5 +5,6 @@ export default ({ url, ...options }) =>
 		headers: {
 			'Content-Type': 'application/json'
 		},
+		mode: 'cors',
 		...options
 	}).then(resp => resp.json());
