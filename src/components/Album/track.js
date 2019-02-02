@@ -3,8 +3,7 @@ import styled from 'styled-components';
 import { getYearFromRelease } from 'helpers/transformers';
 import global from 'helpers/global';
 import Audio from 'components/Audio';
-import CircularProgressbar from 'react-circular-progressbar';
-import 'react-circular-progressbar/dist/styles.css';
+import RoundedChart from 'components/RoundedChart';
 
 const TrackItem = styled.li`
 	display: flex;
@@ -72,23 +71,7 @@ class Track extends Component {
 				</Wrapper>
 				{percentage !== 0.0 && (
 					<div style={{ width: 33, position: 'absolute', right: 50 }}>
-						<CircularProgressbar
-							percentage={percentage}
-							text={`${percentage.toFixed(0)}%`}
-							styles={{
-								path: {
-									stroke: global.style.secondaryColor
-								},
-								trail: {
-									stroke: global.style.primaryColor
-								},
-								text: {
-									fill: global.style.secondaryColor,
-									fontWeight: 900,
-									fontSize: '1.6em'
-								}
-							}}
-						/>
+						<RoundedChart percentage={percentage} />
 					</div>
 				)}
 				<Audio audio={song.previewUrl} onTimeUpdate={this.setPercentage} percentage={percentage} />
