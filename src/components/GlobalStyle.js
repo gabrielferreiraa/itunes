@@ -1,5 +1,5 @@
-import { createGlobalStyle } from "styled-components";
-import global from "helpers/global";
+import { createGlobalStyle } from 'styled-components';
+import global from 'helpers/global';
 
 const GlobalStyle = createGlobalStyle`
     html {
@@ -13,6 +13,12 @@ const GlobalStyle = createGlobalStyle`
         background-repeat: no-repeat;
         background-attachment: fixed;
         font-family: ${global.style.fontFamily};
+    }
+
+    @media screen and (max-width: 1200px) {
+        body {
+            font-size: 12px;
+        }
     }
 `;
 

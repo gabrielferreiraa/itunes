@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import global from 'helpers/global';
 import CircularProgressbar from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
@@ -22,5 +23,13 @@ const RoundedChart = ({ percentage }) => (
 		}}
 	/>
 );
+
+RoundedChart.defaultProps = {
+	percentage: 0
+};
+
+RoundedChart.propTypes = {
+	percentage: PropTypes.number
+};
 
 export default RoundedChart;

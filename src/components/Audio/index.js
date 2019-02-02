@@ -13,6 +13,7 @@ const PlayerBtn = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	cursor: pointer;
 
 	&:before {
 		content: url(/${props => fileNameBySituation(props.situation)}.svg);

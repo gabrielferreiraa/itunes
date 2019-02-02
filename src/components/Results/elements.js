@@ -13,9 +13,21 @@ export const List = styled.ul`
 export const Item = styled.li`
 	display: flex;
 	justify-content: center;
-	width: calc(100% / 7);
+	width: calc((100% / 6) - 20px);
 	flex-wrap: wrap;
 	margin: 0 10px 30px 10px;
+
+	@media screen and (max-width: 1200px) {
+		width: calc((100% / 3) - 20px);
+	}
+
+	@media screen and (max-width: 768px) {
+		width: calc((100% / 2) - 20px);
+	}
+
+	@media screen and (max-width: 480px) {
+		width: 100%;
+	}
 `;
 
 export const CoverImage = styled.img`

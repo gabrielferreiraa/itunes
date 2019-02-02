@@ -6,11 +6,22 @@ import Track from './track';
 
 const StyledAlbumItem = styled.li`
 	margin: 15px;
+	width: calc(100% / 3);
+
+	@media screen and (max-width: 920px) {
+		width: 100%;
+	}
 `;
 
 const TrackList = styled.ul`
 	list-style-type: none;
 	padding: 0;
+`;
+
+const CollectionCoverImage = styled.img`
+	border-radius: 10px;
+	width: 100%;
+	margin-bottom: 10px;
 `;
 
 class AlbumItem extends Component {
@@ -31,7 +42,7 @@ class AlbumItem extends Component {
 
 		return (
 			<StyledAlbumItem>
-				<img
+				<CollectionCoverImage
 					src={changeImageSize(album.artworkUrl100)}
 					alt={album.collectionName}
 					title={album.collectionName}

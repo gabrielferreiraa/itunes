@@ -8,6 +8,10 @@ const StyledAlbumList = styled.ul`
 	display: flex;
 	align-items: flex-start;
 	justify-content: space-around;
+
+	@media screen and (max-width: 920px) {
+		flex-wrap: wrap;
+	}
 `;
 
 const AlbumList = ({ children }) => <StyledAlbumList>{children}</StyledAlbumList>;

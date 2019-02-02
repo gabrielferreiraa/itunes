@@ -1,7 +1,6 @@
 import React, { Fragment } from 'react';
 import ReactDOM from 'react-dom';
 import { HashRouter as Router } from 'react-router-dom';
-import Footer from 'components/Footer';
 import GlobalStyle from 'components/GlobalStyle';
 import Container from 'components/Container';
 import Routes from 'routes';
@@ -11,11 +10,10 @@ import * as serviceWorker from './serviceWorker';
 const AppRouter = () => (
 	<Router>
 		<Fragment>
+			<GlobalStyle />
 			<Container>
 				<Routes />
 			</Container>
-			<GlobalStyle />
-			<Footer />
 		</Fragment>
 	</Router>
 );

@@ -25,4 +25,5 @@ export const Genre = styled.span`
 
 export const Wrapper = styled.div`
 	text-align: center;
+	margin: 40px;
 `;

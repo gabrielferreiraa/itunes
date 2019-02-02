@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Wrapper, Avatar, ArtistName, Genre } from './elements';
 
 const ArtistWidget = ({ artist }) => (
@@ -10,5 +11,9 @@ const ArtistWidget = ({ artist }) => (
 		<Genre>{artist.primaryGenreName}</Genre>
 	</Wrapper>
 );
+
+ArtistWidget.propTypes = {
+	artist: PropTypes.object.isRequired
+};
 
 export default ArtistWidget;

@@ -1,49 +1,14 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
 import { getYearFromRelease } from 'helpers/transformers';
-import global from 'helpers/global';
 import Audio from 'components/Audio';
 import RoundedChart from 'components/RoundedChart';
+import { TrackItem, Wrapper, Image, Info, Name, Collection, WrapperChart } from './elements';
 
-const TrackItem = styled.li`
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	padding-right: 10px;
-	margin-bottom: 5px;
-	border-bottom: 1px solid rgba(105, 105, 105, 0.058);
-	padding-bottom: 5px;
-	position: relative;
-`;
-
-const Image = styled.img`
-	margin-right: 7px;
-	border-radius: 10px;
-`;
-
-const Name = styled.span`
-	width: 100%;
-	font-weight: 700;
-	color: ${global.style.primaryColor};
-`;
-
-const Collection = styled.small`
-	text-transform: uppercase;
-	font-size: 0.6em;
-	font-weight: 900;
-	color: ${global.style.secondaryColor};
-`;
-
-const Info = styled.div`
-	display: flex;
-	align-items: center;
-	flex-wrap: wrap;
-`;
-
-const Wrapper = styled.div`
-	display: flex;
-	align-items: center;
-`;
+const Chart = ({ percentage }) => (
+	<WrapperChart>
+		<RoundedChart percentage={percentage} />
+	</WrapperChart>
+);
 
 class Track extends Component {
 	state = {
@@ -69,12 +34,8 @@ class Track extends Component {
 						</Collection>
 					</Info>
 				</Wrapper>
-				{percentage !== 0.0 && (
-					<div style={{ width: 33, position: 'absolute', right: 50 }}>
-						<RoundedChart percentage={percentage} />
-					</div>
-				)}
-				<Audio audio={song.previewUrl} onTimeUpdate={this.setPercentage} percentage={percentage} />
+				{percentage !== 0.0 && <Chart percentage={percentage} />}
+				<Audio audio={song.previewUrl} onTimeUpdate={this.setPercentage} />
 			</TrackItem>
 		);
 	}
