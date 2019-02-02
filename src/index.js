@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { HashRouter as Router } from 'react-router-dom';
 import Footer from 'components/Footer';
 import GlobalStyle from 'components/GlobalStyle';
 import Container from 'components/Container';
